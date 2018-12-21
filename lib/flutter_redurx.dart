@@ -1,4 +1,14 @@
-/// Flutter bindings for ReduRx (A thin layer of a Redux-based state manager on top of RxDart).
+
+/// Flutter bindings for ReduRx (A thin layer of a Redux-based state manager on
+/// top of RxDart).
+///
+/// Nomi Modifications:
+/// - Removed nullable property and the {return Container();} statement in
+/// StreamBuilder, so that the library naturally supports null state objects and
+/// rendering in slivers (containers throw errors)
+/// - Added initialData in StreamBuilder so that initial builds don't throw null
+/// before the stream completes. See
+/// https://docs.flutter.io/flutter/widgets/StreamBuilder-class.html
 library flutter_redurx;
 
 import 'dart:async';
@@ -78,12 +88,9 @@ class _ConnectState<S, P> extends State<Connect<S, P>> {
   @override
   Widget build(BuildContext context) {
     return StreamBuilder<P>(
+      initialData: widget.convert(Provider.of<S>(context).store.state),
       stream: _stream,
       builder: (context, snapshot) {
-        if (snapshot.data == null && !nullable) {
-          return Container();
-        }
-
         _prev = snapshot.data;
         return builder(_prev);
       },
