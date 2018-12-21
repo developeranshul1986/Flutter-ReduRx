@@ -6,16 +6,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b46f450-6dfb-40dc-be9e-84df78b94853" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Flutter_ReduRx.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="1b46f450-6dfb-40dc-be9e-84df78b94853" name="Default" comment="/// - Removed nullable property and the {return Container();} statement in&#10;/// StreamBuilder, so that the library naturally supports null state objects and&#10;/// rendering in slivers (containers throw errors)&#10;/// - Added initialData in StreamBuilder so that initial builds don't throw null&#10;/// before the stream completes. See&#10;/// https://docs.flutter.io/flutter/widgets/StreamBuilder-class.html">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/flutter_redurx.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_redurx.dart" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +22,8 @@
       <file leaf-file-name="flutter_redurx.dart" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/flutter_redurx.dart">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+            <state relative-caret-position="399">
+              <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
               <folding>
                 <element signature="e#0#3118#0" expanded="true" />
               </folding>
@@ -42,6 +34,11 @@
     </leaf>
   </component>
   <component name="Git.Settings">
+    <option name="PREVIOUS_COMMIT_AUTHORS">
+      <list>
+        <option value="Wes" />
+      </list>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
@@ -157,6 +154,14 @@
       <option name="presentableId" value="Default" />
       <updated>1545427960967</updated>
     </task>
+    <task id="LOCAL-00001" summary="/// - Removed nullable property and the {return Container();} statement in&#10;/// StreamBuilder, so that the library naturally supports null state objects and&#10;/// rendering in slivers (containers throw errors)&#10;/// - Added initialData in StreamBuilder so that initial builds don't throw null&#10;/// before the stream completes. See&#10;/// https://docs.flutter.io/flutter/widgets/StreamBuilder-class.html">
+      <created>1545429359854</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1545429359854</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -164,11 +169,11 @@
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Messages" visible="true" />
+      <window_info anchor="bottom" id="Messages" sideWeight="0.49963045" visible="true" />
       <window_info anchor="right" id="Palette&#9;" />
       <window_info id="Image Layers" />
       <window_info anchor="right" id="Capture Analysis" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info active="true" anchor="bottom" id="Event Log" sideWeight="0.50036955" side_tool="true" visible="true" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Dart Analysis" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -197,6 +202,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="/// - Removed nullable property and the {return Container();} statement in&#10;/// StreamBuilder, so that the library naturally supports null state objects and&#10;/// rendering in slivers (containers throw errors)&#10;/// - Added initialData in StreamBuilder so that initial builds don't throw null&#10;/// before the stream completes. See&#10;/// https://docs.flutter.io/flutter/widgets/StreamBuilder-class.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="/// - Removed nullable property and the {return Container();} statement in&#10;/// StreamBuilder, so that the library naturally supports null state objects and&#10;/// rendering in slivers (containers throw errors)&#10;/// - Added initialData in StreamBuilder so that initial builds don't throw null&#10;/// before the stream completes. See&#10;/// https://docs.flutter.io/flutter/widgets/StreamBuilder-class.html" />
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="1" />
@@ -205,8 +214,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/lib/flutter_redurx.dart">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="23" lean-forward="true" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
+        <state relative-caret-position="399">
+          <caret line="68" lean-forward="true" selection-start-line="68" selection-end-line="68" />
           <folding>
             <element signature="e#0#3118#0" expanded="true" />
           </folding>

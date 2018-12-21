@@ -61,15 +61,14 @@ class Connect<S, P> extends StatefulWidget {
   final bool nullable;
 
   @override
-  _ConnectState createState() => _ConnectState<S, P>(where, builder, nullable);
+  _ConnectState createState() => _ConnectState<S, P>(where, builder);
 }
 
 class _ConnectState<S, P> extends State<Connect<S, P>> {
-  _ConnectState(this.where, this.builder, this.nullable);
+  _ConnectState(this.where, this.builder);
 
   final bool Function(P oldState, P newState) where;
   final Widget Function(P state) builder;
-  final bool nullable;
 
   P _prev;
   Store<S> _store;
