@@ -52,13 +52,11 @@ class Connect<S, P> extends StatefulWidget {
     @required this.convert,
     @required this.where,
     @required this.builder,
-    this.nullable = false,
   }) : super(key: key);
 
   final P Function(S state) convert;
   final bool Function(P oldState, P newState) where;
   final Widget Function(P state) builder;
-  final bool nullable;
 
   @override
   _ConnectState createState() => _ConnectState<S, P>(where, builder);
