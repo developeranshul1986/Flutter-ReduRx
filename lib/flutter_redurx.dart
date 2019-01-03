@@ -34,8 +34,9 @@ class Provider<T> extends InheritedWidget {
   static _targetType<T>() => T;
 
   /// Sugar to dispatch Actions on the Store in the Provider of the given [context].
-  static Future<void> dispatch<T>(BuildContext context, Action action) =>
-    Provider.of<T>(context).store.dispatch(action);
+  static Future<void> dispatch<T>(BuildContext context, Action action) async {
+    await Provider.of<T>(context).store.dispatch(action);
+  }
 
   /// We never trigger update, this is all up to ReduRx.
   @override
