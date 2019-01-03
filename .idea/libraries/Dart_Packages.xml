@@ -83,6 +83,7 @@
           <value>
             <list>
               <option value="$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.dartlang.org/redurx-1.0.0/lib" />
+              <option value="$PROJECT_DIR$/../../flutter/.pub-cache/git/ReduRx-0bf97a33687df04a8033c95035c3517f5befce4d/lib" />
             </list>
           </value>
         </entry>
@@ -159,6 +160,7 @@
       </option>
     </properties>
     <CLASSES>
+      <root url="file://$PROJECT_DIR$/../../flutter/.pub-cache/git/ReduRx-0bf97a33687df04a8033c95035c3517f5befce4d/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.dartlang.org/async-2.0.8/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.dartlang.org/boolean_selector-1.0.4/lib" />
       <root url="file://$PROJECT_DIR$/../../flutter/.pub-cache/hosted/pub.dartlang.org/charcode-1.1.2/lib" />

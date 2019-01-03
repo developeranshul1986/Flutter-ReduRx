@@ -29,13 +29,13 @@ class Provider<T> extends InheritedWidget {
 
   /// Gets the Provider from a given [BuildContext].
   static Provider<T> of<T>(BuildContext context) =>
-      context.inheritFromWidgetOfExactType(_targetType<Provider<T>>());
+    context.inheritFromWidgetOfExactType(_targetType<Provider<T>>());
 
   static _targetType<T>() => T;
 
   /// Sugar to dispatch Actions on the Store in the Provider of the given [context].
-  static Store<T> dispatch<T>(BuildContext context, ActionType action) =>
-      Provider.of<T>(context).store.dispatch(action);
+  static Future<void> dispatch<T>(BuildContext context, Action action) =>
+    Provider.of<T>(context).store.dispatch(action);
 
   /// We never trigger update, this is all up to ReduRx.
   @override
@@ -52,13 +52,11 @@ class Connect<S, P> extends StatefulWidget {
     @required this.convert,
     @required this.where,
     @required this.builder,
-    this.nullable = false,
   }) : super(key: key);
 
   final P Function(S state) convert;
   final bool Function(P oldState, P newState) where;
   final Widget Function(P state) builder;
-  final bool nullable;
 
   @override
   _ConnectState createState() => _ConnectState<S, P>(where, builder);
@@ -80,8 +78,8 @@ class _ConnectState<S, P> extends State<Connect<S, P>> {
 
     _store = Provider.of<S>(context).store;
     _stream = _store.stream
-        .map<P>(widget.convert)
-        .where((next) => widget.where(_prev, next));
+      .map<P>(widget.convert)
+      .where((next) => widget.where(_prev, next));
   }
 
   @override
