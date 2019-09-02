@@ -14,37 +14,38 @@ library flutter_redurx;
 import 'dart:async';
 import 'package:meta/meta.dart';
 
-import 'package:flutter/material.dart' as flutter;
+import 'package:flutter/material.dart';
 import 'package:redurx/redurx.dart';
 
 export 'package:redurx/redurx.dart';
 
 /// Provider Widget to be on top of the App ([child]) providing the State from a given [store].
-class Provider<T> extends flutter.InheritedWidget {
+class Provider<T> extends InheritedWidget {
   Provider({
-    flutter.Key key,
-    @required flutter.Widget child,
+    Key key,
+    @required Widget child,
     @required this.store,
   }) : super(key: key, child: child);
   final Store<T> store;
 
   /// Gets the Provider from a given [BuildContext].
-  static Provider<T> of<T>(flutter.BuildContext context) =>
-      context.inheritFromWidgetOfExactType(_targetType<Provider<T>>());
+  static Provider<T> of<T>(BuildContext context) =>
+    context.inheritFromWidgetOfExactType(_targetType<Provider<T>>());
 
   static _targetType<T>() => T;
 
   /// Sugar to dispatch Actions on the Store in the Provider of the given [context].
-  static Store<T> dispatch<T>(flutter.BuildContext context, ActionType action) =>
-      Provider.of<T>(context).store.dispatch(action);
+  static Future<void> dispatch<T>(BuildContext context, Action action) async {
+    await Provider.of<T>(context).store.dispatch(action);
+  }
 
   /// We never trigger update, this is all up to ReduRx.
   @override
-  bool updateShouldNotify(flutter.InheritedWidget oldWidget) => false;
+  bool updateShouldNotify(InheritedWidget oldWidget) => false;
 }
 
 /// The Widget that connects the State to a [builder] function.
-class Connect<S, P> extends flutter.StatefulWidget {
+class Connect<S, P> extends StatefulWidget {
   /// [convert] is how you map the State to [builder] props.
   /// With [where] you can filter when the Widget should re-render, this is very important!
   /// If you want to handle [null] values on the [builder] by yourself, set [nullable] to [true].
@@ -79,8 +80,8 @@ class _ConnectState<S, P> extends flutter.State<Connect<S, P>> {
 
     _store = Provider.of<S>(context).store;
     _stream = _store.stream
-        .map<P>(widget.convert)
-        .where((next) => widget.where(_prev, next));
+      .map<P>(widget.convert)
+      .where((next) => widget.where(_prev, next));
   }
 
   @override
