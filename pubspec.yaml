@@ -12,6 +12,10 @@ dependencies:
   flutter:
     sdk: flutter
 
+dependency_overrides:
+  redurx:
+    git: https://github.com/CosmicPangolin/ReduRx.git
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
