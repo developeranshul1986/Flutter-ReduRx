@@ -30,7 +30,7 @@ class Provider<T> extends flutter.InheritedWidget {
 
   /// Gets the Provider from a given [BuildContext].
   static Provider<T> of<T>(flutter.BuildContext context) =>
-    context.inheritFromWidgetOfExactType(_targetType<Provider<T>>());
+    context.dependOnInheritedWidgetOfExactType(aspect: _targetType<Provider<T>>());
 
   static _targetType<T>() => T;
 
