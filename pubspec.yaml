@@ -5,16 +5,16 @@ author: leocavalcante <lc@leocavalcante.com>
 homepage: https://github.com/leocavalcante/ReduRx
 
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
-  redurx: ^1.0.0
+  # redurx: ^1.1.1
   flutter:
     sdk: flutter
 
 dependency_overrides:
   redurx:
-    git: https://github.com/CosmicPangolin/ReduRx.git
+    git: https://github.com/developeranshul1986/ReduRx.git
 
 dev_dependencies:
   flutter_test:
